@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Manual que Todo Verdadeiro Bolsonarista PRECISA Ter</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Cores principais */
+        :root {
+            --vermelho: #9A0000;
+            --vermelho-claro: #CC0000;
+            --azul: #002776;
+            --amarelo: #FFD700;
+            --preto: #000000;
+            --branco: #FFFFFF;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to bottom, var(--vermelho), var(--azul));
+            color: var(--branco);
+            text-align: center;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="20" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.05)">BOLSONARO</text></svg>');
+            opacity: 0.1;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--vermelho-claro);
+            color: var(--branco);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            background-color: #b30000;
+        }
+        
+        .btn-amarelo {
+            background-color: var(--amarelo);
+            color: var(--preto);
+        }
+        
+        .btn-amarelo:hover {
+            background-color: #ffcc00;
+        }
+        
+        /* Seção da Bandeira */
+        .flag-container {
+            background-color: var(--preto);
+            padding: 2rem 1rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .flag-image {
+            max-width: 100%;
+            height: auto;
+            border: 5px solid var(--amarelo);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+        
+        .flag-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .flag-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: var(--amarelo);
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Benefícios */
+        .benefits {
+            background: linear-gradient(to bottom, var(--preto), #222);
+            color: var(--branco);
+            padding: 2rem 1rem;
+        }
+        
+        .benefits h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--amarelo);
+        }
+        
+        .benefits-list {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-icon {
+            color: var(--vermelho-claro);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        /* Depoimentos */
+        .testimonials {
+            background-color: var(--branco);
+            padding: 2rem 1rem;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--vermelho);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial {
+            background-color: #f1f1f1;
+            padding: 1.5rem;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: """;
+            font-size: 3rem;
+            color: var(--vermelho);
+            position: absolute;
+            top: 0;
+            left: 10px;
+            line-height: 1;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            margin-top: 1rem;
+            color: var(--azul);
+        }
+        
+        /* Urgência */
+        .urgency {
+            background-color: var(--vermelho);
+            color: var(--branco);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .counter {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            color: var(--amarelo);
+        }
+        
+        /* Bônus */
+        .bonus {
+            background: linear-gradient(to bottom, var(--azul), #001a4d);
+            color: var(--branco);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .bonus h2 {
+            color: var(--amarelo);
+            margin-bottom: 1.5rem;
+        }
+        
+        .bonus-list {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .bonus-item {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .bonus-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: var(--amarelo);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--preto);
+            color: var(--branco);
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .security-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .security-badge {
+            background-color: var(--branco);
+            color: var(--preto);
+            padding: 0.5rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+        
+        /* Responsividade */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .flag-overlay {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .flag-overlay {
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+                width: 90%;
+            }
+        }
+        
+        /* Animação de piscar para urgência */
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        .blink {
+            animation: blink 1.5s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>🚨 O MANUAL PROIBIDO QUE A ESQUERDA NÃO QUER QUE VOCÊ LEIA!</h1>
+        <p class="subtitle">📛 Você defende Bolsonaro, mas ainda não tem esse manual? Então está lutando DESARMADO contra o comunismo!</p>
+        <a href="https://mpago.li/2azEmfx" class="btn" target="_blank">QUERO ME ARMAR AGORA!</a>
+    </header>
+    
+    <!-- Seção da Bandeira -->
+    <section class="flag-container">
+        <h2 style="color: var(--amarelo); margin-bottom: 1.5rem;">🇧🇷 ESTE MANUAL É UM ATAQUE À ESQUERDA E UMA HOMENAGEM AO BRASIL! 🇧🇷</h2>
+        <div style="position: relative; display: inline-block;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png" 
+                 alt="Bandeira do Brasil" 
+                 class="flag-image">
+            <div class="flag-overlay">"O FUTURO DO BRASIL ESTÁ EM SUAS MÃOS!"</div>
+        </div>
+        <p style="color: var(--branco); margin-top: 1.5rem; font-size: 1.1rem;">
+            Este manual foi criado para <strong>verdadeiros patriotas</strong> que querem <strong>defender o Brasil</strong> da esquerda!
+        </p>
+    </section>
+    
+    <!-- Benefícios -->
+    <section class="benefits">
+        <h2>⚔️ O QUE VOCÊ VAI APRENDER NESTE MANUAL?</h2>
+        <div class="benefits-list">
+            <div class="benefit-item">
+                <span class="benefit-icon">✔</span>
+                <span>Os 10 ARGUMENTOS que DESTROÇAM qualquer esquerdista em 30 segundos</span>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">✔</span>
+                <span>As MENTIRAS mais repetidas pela Globo e como REFUTÁ-LAS</span>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">✔</span>
+                <span>Dados SECRETOS que a esquerda esconde (e como usá-los)</span>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">✔</span>
+                <span>Estratégias para DOMINAR debates no WhatsApp, Twitter e Facebook</span>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">✔</span>
+                <span>O plano da esquerda para 2026 e como SABOTÁ-LO</span>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="https://mpago.li/2azEmfx" class="btn btn-amarelo" target="_blank">SIM, QUERO ME TORNAR IMBATÍVEL!</a>
+        </div>
+    </section>
+    
+    <!-- Depoimentos -->
+    <section class="testimonials">
+        <h2>🧠 Quem já LEU o manual está DESTRUINDO a esquerda!</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                "Depois desse manual, nem meus tios petistas encostam em mim no churrasco!"
+                <div class="testimonial-author">Carlos, 35 anos, MG</div>
+            </div>
+            <div class="testimonial">
+                "Finalmente um guia que ensina a GANHAR discussões, não só brigar!"
+                <div class="testimonial-author">Ana, 28 anos, SP</div>
+            </div>
+            <div class="testimonial">
+                "Comprei e em 1 semana já fiz 3 esquerdistas calarem a boca!"
+                <div class="testimonial-author">Ricardo, 42 anos, RS</div>
+            </div>
+            <div class="testimonial">
+                "Meu WhatsApp virou um campo de batalha e eu estou ganhando todas!"
+                <div class="testimonial-author">Patrícia, 31 anos, PR</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Urgência -->
+    <section class="urgency">
+        <h2>⏳ ATENÇÃO: SÓ 100 CÓPIAS DISPONÍVEIS!</h2>
+        <p>🚫 A ESQUERDA já está tentando derrubar este material. Quando acabar, NÃO TEREMOS REPOSIÇÃO!</p>
+        <div class="counter blink">ÚLTIMAS 15 CÓPIAS RESTANTES!</div>
+        <a href="https://mpago.li/2azEmfx" class="btn" target="_blank">GARANTA O SEU AGORA →</a>
+    </section>
+    
+    <!-- Bônus -->
+    <section class="bonus" id="oferta">
+        <h2>🎁 COMPRE AGORA E LEVE 3 BÔNUS EXCLUSIVOS!</h2>
+        <div class="bonus-list">
+            <div class="bonus-item">
+                <span class="bonus-icon">📌</span>
+                <span>Lista dos 50 perfis esquerdistas mais perigosos (e como neutralizá-los)</span>
+            </div>
+            <div class="bonus-item">
+                <span class="bonus-icon">📢</span>
+                <span>Modelos de POSTS PRONTOS para viralizar</span>
+            </div>
+            <div class="bonus-item">
+                <span class="bonus-icon">🔒</span>
+                <span>Acesso ao GRUPO SECRETO de estratégia</span>
+            </div>
+        </div>
+        <p style="margin: 1.5rem 0; font-size: 1.2rem;">💥 Isso vale CENTENAS de reais, mas você leva GRÁTIS se agir agora!</p>
+        <a href="https://mpago.li/2azEmfx" class="btn" style="font-size: 1.5rem; padding: 1.5rem 3rem;">QUERO MEU MANUAL + BÔNUS AGORA MESMO!</a>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="security-badges">
+            <div class="security-badge">🔒 Compra 100% Segura</div>
+            <div class="security-badge">🚀 Entrega Imediata</div>
+        </div>
+        <p>Precisa de ajuda?</p>
+        <p style="margin-top: 1rem; font-size: 0.8rem;">© 2023 - O Manual que Todo Verdadeiro Bolsonarista PRECISA Ter - Todos os direitos reservados</p>
+    </footer>
+    
+    <script>
+        // Contador regressivo
+        function updateCounter() {
+            const counter = document.querySelector('.counter');
+            const randomNumber = Math.floor(Math.random() * 5) + 10;
+            counter.textContent = `ÚLTIMAS ${randomNumber} CÓPIAS RESTANTES!`;
+        }
+        
+        // Atualiza a cada 5 segundos para criar urgência
+        setInterval(updateCounter, 5000);
+        
+        // Animação de scroll suave para os links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Popup de saída (opcional)
+        window.addEventListener('mouseout', function(e) {
+            if (e.clientY < 0) {
+                // Aqui você pode adicionar um popup de saída
+                // alert('ESPERE! Você vai mesmo desistir de vencer a guerra ideológica?');
+            }
+        });
+    </script>
+</body>
+</html>
